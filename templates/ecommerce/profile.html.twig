@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Profile - Our Store{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h1 class="mb-4">My Profile</h1>
+                        <dl class="row mb-0">
+                            <dt class="col-sm-3">Name</dt>
+                            <dd class="col-sm-9">{{ app.user.name }}</dd>
+                            <dt class="col-sm-3">Email</dt>
+                            <dd class="col-sm-9">{{ app.user.email }}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login - Our Store{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm p-4">
+                    <h2 class="text-center mb-4">Sign In</h2>
+                    {% if error %}
+                        <div class="alert alert-danger">
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                    {% endif %}
+
+                    <form method="post" action="{{ path('app_login') }}">
+                        <div class="mb-3">
+                            <label for="_username" class="form-label">Email address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="_username"
+                                name="_username"
+                                value="{{ last_username }}"
+                                required
+                                autofocus
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="_password" class="form-label">Password</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="_password"
+                                name="_password"
+                                required
+                                autocomplete="current-password"
+                            >
+                        </div>
+
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <button type="submit" class="btn btn-primary w-100 mt-2">Login</button>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        Pas encore de compte ?
+                        <a href="{{ path('app_register') }}">Créer un compte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

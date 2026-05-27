@@ -1,0 +1,44 @@
+# ====================================
+# Symfony & PHP
+# ====================================
+/vendor/
+/var/
+/public/bundles/
+/public/build/
+/phpunit.xml
+/.phpunit.result.cache
+*.phpunit.result.cache
+
+# ====================================
+# Fichiers d'environnement
+# ====================================
+.env.local
+.env.*.local
+.env.test.local
+
+# ====================================
+# Fichiers liés à l'IA et aux outils (À CACHER DU PROF)
+# ====================================
+.cursorrules
+.cursorignore
+TASKS.md
+.cursor/
+.aider*
+.copilot*
+
+# ====================================
+# IDE, OS et autres
+# ====================================
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+npm-debug.log
+yarn-error.log
+
+# ====================================
+# Base de données locale SQLite (si utilisée)
+# ====================================
+/var/data.db
+/var/data.db-journal
