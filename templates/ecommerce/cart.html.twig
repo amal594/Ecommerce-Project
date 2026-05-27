@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your Cart - Our Store{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="mb-4">Your Shopping Cart</h1>
+        
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wireless Headphones</td>
+                        <td>$79.99</td>
+                        <td>1</td>
+                        <td>$79.99</td>
+                        <td><button class="btn btn-sm btn-danger">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="text-end mt-4">
+            <h3>Total: $79.99</h3>
+            <a href="#" class="btn btn-success btn-lg">Proceed to Checkout</a>
+        </div>
+    </div>
+{% endblock %}
